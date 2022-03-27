@@ -11,7 +11,7 @@ public class Hotel implements Serializable {
   private static final long serialVersionUID = 5560221391479816650L;
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  //@GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   private String name;

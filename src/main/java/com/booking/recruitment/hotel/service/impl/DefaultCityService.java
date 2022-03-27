@@ -53,7 +53,7 @@ class DefaultCityService implements CityService
     public City createCity (City city)
     {
         System.out.println("Putting into the DB");
-        if (city.getId () != null) {
+        if (city.getId () == null) {
             throw new BadRequestException ("The ID must not be provided when creating a new City");
         }
         

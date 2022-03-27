@@ -73,7 +73,7 @@ class DefaultHotelService implements HotelService {
   @CachePut(value=CACHE_NAME, key="#hotel.getId()")
   public Hotel createNewHotel(Hotel hotel) {
       System.out.println("Putting into the DB");
-    if (hotel.getId() != null) {
+    if (hotel.getId() == null) {
       throw new BadRequestException("The ID must not be provided when creating a new Hotel");
     }
     return hotelRepository.save(hotel);

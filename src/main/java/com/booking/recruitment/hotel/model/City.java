@@ -12,7 +12,7 @@ public class City implements Serializable {
   private static final long serialVersionUID = 3252591505029724236L;
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  //@GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   private String name;
