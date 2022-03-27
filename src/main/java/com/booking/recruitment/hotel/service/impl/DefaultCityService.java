@@ -70,11 +70,14 @@ class DefaultCityService implements CityService
     }
 
     @Override
+    @Cacheable(cacheNames = CACHE_NAME, key = "#cityId +'-'+ #sortBy")
     public List <City> getNearestCities (final Long cityId , final String sortBy)
     {
         if (!sortBy.equals ("distance")) {
             return null;
         }
+        System.out.println("Searching from the DB for the ID" + cityId);
+
         List <City> citys = cityRepository.findAll ();
         City nearToThisCity = getCityById (cityId);
         
