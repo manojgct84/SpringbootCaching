@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "9b5046ec-1688-4e7d-b06b-e5ce3fc70626",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "City",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "HotelCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": 5,\"name\": \"Monaghan Hotel\",\"rating\": 9.2,\"city\": {\"id\": 6,\"name\": \"Chennai\",\"cityCentreLatitude\": 52.36878,\"cityCentreLongitude\": 4.903303},\"address\":\"Weesperbuurt en Plantage\",\"latitude\": 52.364799,\"longitude\": 4.908971,\"deleted\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/hotel/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"hotel",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CityCreate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/city/search/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"city",
+						"search",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
